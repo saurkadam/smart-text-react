@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-flex {
+  display:flex
+}
+.app-flex-row {
+  flex-direction: row;
+}
+.app-flex-column {
+  flex-direction: column;
+}
+.blue-color {
+  background-color: #337ab7;
+  color:#fff !important;
+}
+.dark-blue-color {
+  background-color: #1a1350;
+  color:#fff !important;
+ 
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center{
+  align-items: center;
+}
+.col-md-6 {
+  width: 66.66%;
+}
+.col-md-3 {
+  width: 33.33%
+}
+.col-md-2 {
+  width: 16.33%;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.document-coloumn {
+  width: 65%;
+  padding:1em 0;
+}
+.padding-left {
+  padding-left: 10px !important;
+}
+.container {
+  margin: 0 6em;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.back-color-white {
+  background-color:#fff;
+}
+.main-background {
+  background-color: #dddd;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.case th, td {
+  padding: 15px;
+  text-align: left;
+}
+.case table, .withborder {
+  border: 1px solid black;
+}
+.case table {
+  border-collapse:collapse;
+}
+.Home  table, .withoutborder {
+  border:none;
+}

@@ -1,0 +1,8 @@
+.app-bar-container {
+    justify-content: space-between;
+    margin: 0 6rem 0 6rem;
+}
+.logo-size {
+    width: 19rem;
+    height: 4rem;
+}

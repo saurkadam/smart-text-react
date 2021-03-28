@@ -1,0 +1,18 @@
+.search-bar-icon {
+    position: absolute;
+    width: 2%;
+    z-index: 100;
+    right: 33%;
+    margin-top: 10px;
+}
+.input-field {
+    width: 35%;
+    height: 28px;
+}
+.search-bar-container {
+    position: relative;
+}
+.input-field::placeholder{
+    padding-left:5px;
+    font-style: italic;
+}
