@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import { debounce } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './SearchBar.module.css'
 
 export default function SearchBar(props) {
     const {placeHolderText, callBackMethod, searchText} = props
     const [text,setText] = useState('')
-    const handleClick = (event) => {
-        callBackMethod(event) 
+    const handleClick = () => {
+        callBackMethod(text) 
     }
     useEffect(() => {
         if(searchText !== '') {

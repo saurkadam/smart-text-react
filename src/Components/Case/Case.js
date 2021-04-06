@@ -4,6 +4,7 @@ import Accordion from '../Accordion/Accordion'
 import Card from '../Card/Card'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { withRouter } from "react-router-dom";
+import {Link} from 'react-router-dom'
 
 const Case = (props) => {
     const {state} = props.location
@@ -27,8 +28,16 @@ const Case = (props) => {
         <div className='case'>
             <section id={'section1'}>
                 <Jumbotron backPageText='case' searchCallBack={(value) => {getResult(value)}} searchText={search} adminLink='/' caseFile={state} searchTextLabel='Search Document'/>
-                <div className='app-flex app-flex-row justify-content-space-between container'>
-                    <h4>Documents</h4>
+                <div className='container' style={{marginTop:'1em', fontWeight:'bolder', fontSize:'16px'}}>Documents Summary</div>
+                <div className='container' style={{marginTop:'1em'}}>
+                    <Card padding={{padding:'0.25em'}}>
+                        <div className='app-inline-flex '>
+                            <p>Description: </p>
+                            <p> Legal, complaint, case, claim</p>
+                        </div>
+                    </Card>
+                </div>
+                <div className='app-flex app-flex-row justify-content-flex-end container'>
                     <p onClick={(event) => {expandAllFunc(event)}}>{expandAll.expandAllText}</p>
                 </div>
                 <Accordion
@@ -47,7 +56,19 @@ const Case = (props) => {
                         </div>
                         <div>
                             {searchResults.map((item, index) => {
-                                return <Card SearchResult={item} key={index} />
+                                return <Card key={index}>
+                                    <>            
+                                        <Link 
+                                            to={{
+                                                pathname:'/case',
+                                                state: item.name
+                                            }}
+                                            style={{
+                                                fontSize:'25px'
+                                            }}>{item.name}</Link>
+                                            <p>{item.description}</p>
+                                    </>
+                                </Card>
                             })}
                         </div>
                     </>

@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import styles from './Accordion.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import SearchBar from '../SearchBar/SearchBar'
+
 
 export default function AccordionTable(props) {
     const {contentData, PanelComponent, dataTransfer, showTable, sortOrder, showExpanded} = props
@@ -80,6 +80,7 @@ export default function AccordionTable(props) {
                         {showData && contentData.map((item, index) => {
                             return (<tr key={index}>
                                 <td className={`text-left  padding-left ${styles['space-padder']} text-decoration-underline`} onClick={(evt) => {dataTransfer(evt)}}>{item.name}</td>
+                                <td className='text-center'>{item.sentiment}</td>
                                 <td className='text-center'>{item.type}</td>
                                 <td className='text-center'>{item.length}</td>
                             </tr>)

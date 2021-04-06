@@ -4,7 +4,7 @@ import CustomBackBtn from '../CustomBackBtn/CustomBackBtn'
 import styles from './Jumbotron.module.css'
 
 export default function Jumbotron(props) {
-    const { backPageText, adminLink, caseFile, searchTextLabel, searchText, searchCallBack} = props
+    const { backPageText, adminLink, caseFile, searchTextLabel, searchCallBack, placeHolderText, searchText} = props
     return (
     <div className={`dark-blue-color ${styles['padding-jumbotron']} text-center`}>
         <div className={`app-flex app-flex-row ${styles['padding-jumbtron-head']}  justify-content-space-between`}>
@@ -13,7 +13,7 @@ export default function Jumbotron(props) {
            <p></p>
         </div>
         <h4>{searchTextLabel}</h4>
-        <SearchBar searchTextLabel={searchTextLabel} callBackMethod={(value) => {searchCallBack(value)}} searchText={searchText}/>
+        <SearchBar searchText={searchText} placeHolderText={placeHolderText} callBackMethod={(value) => {searchCallBack(value)}} />
     </div>
     )
 }
